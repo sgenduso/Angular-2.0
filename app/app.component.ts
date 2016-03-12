@@ -11,6 +11,10 @@ interface Hero {
     selector: 'my-app',
     template: `
       <h1>{{title}}</h1>
+      <h2>My Heroes</h2>
+      <ul class="heroes">
+        <li *ngFor="#hero of heroes">
+      </ul>
       <h2>{{hero.name}} details!</h2>
       <div><label>id: </label>{{hero.id}}</div>
       <div>
@@ -40,3 +44,5 @@ var HEROES: Hero[] = [
   { "id": 19, "name": "Magma" },
   { "id": 20, "name": "Tornado" }
 ];
+
+public heroes = HEROES;
