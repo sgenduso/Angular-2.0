@@ -82,6 +82,7 @@ export class AppComponent {
     name: 'Windstorm'
   };
   public heroes = HEROES;
+  selectedHero: Hero;
 }
 
 var HEROES: Hero[] = [
