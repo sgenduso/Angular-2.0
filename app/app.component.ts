@@ -17,11 +17,11 @@ interface Hero {
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
       </ul>
-      <h2>{{hero.name}} details!</h2>
-      <div><label>id: </label>{{hero.id}}</div>
+      <h2>{{selectedHero.name}} details!</h2>
+      <div><label>id: </label>{{selectedHero.id}}</div>
       <div>
-        <label>name: </label>
-        <div><input [(ngModel)]="hero.name" placeholder="name"></div>
+          <label>name: </label>
+          <input [(ngModel)]="selectedHero.name" placeholder="name"/>
       </div>
       `,
       styles:[`
@@ -77,12 +77,9 @@ interface Hero {
 // component class controls the appearance and behavior of a view through its template.
 export class AppComponent {
   public title = 'Tour of Heroes';
-  public hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
   public heroes = HEROES;
-  selectedHero: Hero;
+  public selectedHero: Hero;
+  onSelect(hero: Hero) { this.selectedHero = hero; };
 }
 
 var HEROES: Hero[] = [
