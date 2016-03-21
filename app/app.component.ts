@@ -25,6 +25,7 @@ interface Hero {
           <input [(ngModel)]="selectedHero.name" placeholder="name"/>
         </div>
       </div>
+      [class.selected]="hero === selectedHero"
       `,
       styles:[`
     .selected {
