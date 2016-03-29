@@ -21,6 +21,8 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             HeroService = (function () {
                 function HeroService() {
                 }
+                HeroService.prototype.getHeroes = function () {
+                };
                 HeroService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
