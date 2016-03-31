@@ -2,6 +2,7 @@ import {Component} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
+constructor(private _heroService: HeroService) { }
 @Component({
   selector: 'my-app',
   template:`
@@ -65,7 +66,8 @@ import {HeroService} from './hero.service';
       border-radius: 4px 0 0 4px;
     }
   `],
-  directives: [HeroDetailComponent]
+  directives: [HeroDetailComponent],
+  providers: [HeroService],
 })
 export class AppComponent {
   title = 'Tour of Heroes';
