@@ -73,5 +73,8 @@ export class AppComponent {
   title = 'Tour of Heroes';
   heroes = Hero[];
   selectedHero: Hero;
-  onSelect(hero: Hero) { this.selectedHero = hero; }
+  onSelect(hero: Hero) { this.selectedHero = hero; };
+  getHeroes() {
+   this.heroes = this._heroService.getHeroes();
+ }
 }
