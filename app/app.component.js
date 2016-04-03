@@ -34,13 +34,21 @@ System.register(['angular2/core', './hero-detail.component', './hero.service'], 
                 AppComponent.prototype.onSelect = function (hero) { this.selectedHero = hero; };
                 ;
                 AppComponent.prototype.getHeroes = function () {
-                    this.heroes = this._heroService.getHeroes();
+                    var _this = this;
+                    this._heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
                 };
                 ;
                 AppComponent.prototype.ngOnInit = function () {
                     this.getHeroes();
                 };
                 ;
+                AppComponent.prototype.getHeroesSlowly = function () {
+                    return new Promise(function (resolve) {
+                        return setTimeout(function () { return resolve(HEROES); }, 2000);
+                    } // 2 seconds
+                     // 2 seconds
+                    );
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
