@@ -68,7 +68,6 @@ constructor(private _heroService: HeroService) { }
     }
   `],
   directives: [HeroDetailComponent],
-  providers: [HeroService],
 })
 export class HeroesComponent implements OnInit {
   title = 'Tour of Heroes';
