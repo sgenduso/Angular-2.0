@@ -46,7 +46,13 @@ System.register(['angular2/core', './hero.service', './heroes.component', 'angul
                             path: '/heroes',
                             name: 'Heroes',
                             component: heroes_component_1.HeroesComponent
-                        }
+                        },
+                        {
+                            path: '/dashboard',
+                            name: 'Dashboard',
+                            component: DashboardComponent,
+                            useAsDefault: true
+                        },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

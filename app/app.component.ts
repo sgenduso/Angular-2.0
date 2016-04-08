@@ -20,7 +20,13 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
     path: '/heroes',
     name: 'Heroes',
     component: HeroesComponent
-  }
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: DashboardComponent,
+    useAsDefault: true
+  },
 ])
 export class AppComponent {
   title = 'Tour of Heroes';
