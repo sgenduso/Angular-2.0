@@ -6,6 +6,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
+    <a [routerLink]="['Dashboard']">Dashboard</a>
     <a [routerLink]="['Heroes']">Heroes</a>
     <router-outlet></router-outlet>
   `,
