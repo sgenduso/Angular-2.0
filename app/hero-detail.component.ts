@@ -17,6 +17,11 @@ import { Component, Input, OnInit } from 'angular2/core';
 `,
 inputs: ['hero']
 })
-export class HeroDetailComponent {
+ngOnInit() {
+   let id = +this._routeParams.get('id');
+   this._heroService.getHero(id)
+     .then(hero => this.hero = hero);
+ }
+export class HeroDetailComponent implements OnInit {
   hero: Hero;
 }
