@@ -15,6 +15,9 @@ System.register([], function(exports_1, context_1) {
             HeroDetailComponent = (function () {
                 function HeroDetailComponent() {
                 }
+                HeroDetailComponent.prototype.goBack = function () {
+                    window.history.back();
+                };
                 return HeroDetailComponent;
             }());
             exports_1("HeroDetailComponent", HeroDetailComponent);

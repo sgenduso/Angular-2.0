@@ -24,4 +24,7 @@ ngOnInit() {
  }
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
+  goBack() {
+    window.history.back();
+  }
 }
